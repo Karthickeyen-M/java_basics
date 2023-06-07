@@ -1,0 +1,22 @@
+package basics;
+
+import java.util.ArrayList;
+
+public class DemoList {
+	public static void main(String[] args){
+		ArrayList<String>family = new ArrayList<>();
+		family.add("Karthickeyen");
+		family.add("Maruthaiya");
+		family.add("Kasthuri");
+		family.add("Rajeshwari");
+		family.add("Monisha");
+		family.add("Harenisha");
+		ArrayList<String>clgfriends = new ArrayList<>();
+		clgfriends.add("Akhil");
+		clgfriends.add("Akilesh");
+		clgfriends.add("Anand");
+		clgfriends.add("Kavi");
+		System.out.println(family);
+		System.out.println(clgfriends);
+	}
+}

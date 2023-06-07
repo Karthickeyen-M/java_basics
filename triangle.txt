@@ -1,0 +1,35 @@
+package basics;
+class T_Triangle{
+	private double base,height;
+	public T_Triangle(double base,double height){
+		this.base = base;
+		this.height = height;
+	}
+	public T_Triangle(double base){
+		this.base = base;
+	}
+	public double getBase() {
+		return base;
+	}
+	public void setBase(double base) {
+		this.base = base;
+	}
+	public double getHeight() {
+		return height;
+	}
+	public void setHeight(double height) {
+		this.height = height;
+	}
+	public double area(String s){
+		if(s.equals("scis")) return (base*height)/2;
+		else return (Math.sqrt(3)/4)*(base*base);
+	}
+}
+public class Triangle {
+	public static void main(String[] args){
+		T_Triangle scis = new T_Triangle(9,9);
+		T_Triangle eq   = new T_Triangle(9);
+		System.out.println("Area of Scalene/Isosceles Triangle is "+scis.area("scis")+" sq.units");
+		System.out.println("Area of Equilateral Triangle is "+eq.area("eq")+" sq.units");
+	}
+}

@@ -1,0 +1,17 @@
+package basics;
+import java.util.ArrayList;
+public class List2 {
+	
+	public static void main(String[] args){
+		ArrayList<Object>l1 = new ArrayList<>();
+		l1.add("Karthickeyen");
+		l1.add(21);
+		l1.add("SKCET");
+		l1.add(68.85);
+		l1.add(183.7);
+		l1.add(" ");
+		l1.add('a');
+		System.out.println(l1);
+	}
+
+}
