@@ -1,0 +1,56 @@
+package package1;
+
+import java.util.*;
+class DataStr{
+    int l;
+    char a[];
+    int s;
+    char data2[];
+    int top = -1;
+    DataStr(int l){
+        a = new char[l];
+        s=l;
+        data2= new char[l];
+    }
+    void push(char data){
+        if(top==s-1){
+            System.out.println();
+        }
+        else{
+            top++;
+            a[top] = data;
+        }
+    }
+    void pop(String s){
+        int j=0,f=1;
+        for(int i=top;i>=0;i--){
+            data2[j] = a[i];
+            j++;
+        }
+        for(int i=0;i<=top;i++){
+            if(data2[i]!=s.charAt(i)){
+                f=0;
+                break;
+            }
+        }
+        if(f==1){
+            System.out.print(s+" is palindrome");
+        }
+        else{
+            System.out.print(s+" is not a palindrome");
+        }
+    }
+    
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int l = s.length();
+        char data;
+        DataStr d = new DataStr(l);
+        for(int i=0;i<l;i++){
+            data = s.charAt(i);
+            d.push(data);
+        }
+        d.pop(s);
+    }
+}

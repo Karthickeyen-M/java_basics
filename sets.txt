@@ -1,0 +1,38 @@
+package package1;
+
+import java.util.HashSet;
+
+public class Sets {
+    public static void main(String[] args)
+    {
+        HashSet<String> num1=new HashSet<>();
+        HashSet<String> num2=new HashSet<>();
+
+
+        num1.add("karthi");
+        num1.add("maruthu");
+        num1.add("kasthuri");
+        num1.add("monisha");
+        num1.add("harenisha");
+        num2.add("karthi");
+        num2.add("maruthu");
+        num2.add("kasthuri");
+        num2.add("akhil");
+        num2.add("akilesh");
+        num2.add("kavi");
+
+        HashSet<String> union=new HashSet<>(num1);
+        HashSet<String> intersection=new HashSet<>(num1);
+
+        union.addAll(num2);
+        intersection.retainAll(num2);
+
+        System.out.println("Hash set num1:"+num1);
+        System.out.println("Hash set num2:"+num2);
+        System.out.println("union for Hash set num1 and num2:"+union);
+        System.out.println("intersection for Hash set num1 and num2:"+intersection);
+
+
+
+    }
+}

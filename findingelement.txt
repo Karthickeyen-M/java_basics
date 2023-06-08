@@ -1,0 +1,29 @@
+package package1;
+
+import java.util.*;
+class Dem{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[]a=new int[n];
+        for(int i=0;i<n;i++)
+        a[i] = sc.nextInt();
+        int v = sc.nextInt();
+        int c=0,f=0,fl=0;
+        for(int i=0;i<n;i++){
+            if(i==n-1&&f==0&&a[i]!=v){
+                fl=1;
+                break;
+            }
+            if(a[i]==v){
+                f=1;
+                break;
+            }
+            c++;
+        }
+        if(fl!=1)
+        System.out.print("Index of "+v+" is "+c);
+        else
+        System.out.print("Not found");
+    }
+}

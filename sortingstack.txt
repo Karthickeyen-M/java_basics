@@ -1,0 +1,39 @@
+package package1;
+
+import java.util.*;
+class DataStru{
+    int n;
+    int a[];
+    int s;
+    int top = -1;
+    DataStru(int n){
+        a = new int[n];
+        s=n;
+    }
+    void push(int data){
+        if(top == s-1){
+            System.out.println();
+        }
+        else{
+            top++;
+            a[top] = data;
+        }
+    }
+    void sort(){
+        Arrays.sort(a);
+        for(int i=top;i>=0;i--){
+            System.out.print(a[i]+" ");
+        }
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        DataStru d = new DataStru(n);
+        int data;
+        for(int i=0;i<n;i++){
+            data = sc.nextInt();
+            d.push(data);
+        }
+        d.sort();
+    }
+}

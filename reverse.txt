@@ -1,0 +1,41 @@
+package package1;
+
+import java.util.*;
+class Reverse{
+    int l;
+    char a[];
+    int s;
+    int top = -1;
+    Reverse(int l){
+        a = new char[l];
+        s=l;
+    }
+    void push(char data){
+        if(top==s-1){
+            System.out.println();
+        }
+        else{
+            top++;
+            a[top] = data;
+            
+        }
+    }
+    void display(){
+        for(int i=top;i>=0;i--){
+            System.out.print(a[i]);
+        }
+    }
+    
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int l = s.length();
+        Reverse d = new Reverse(l);
+        char data;
+        for(int i=0;i<l;i++){
+            data = s.charAt(i);
+            d.push(data);
+        }
+        d.display();
+    }
+}

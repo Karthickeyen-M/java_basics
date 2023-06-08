@@ -1,0 +1,77 @@
+package package1;
+
+import java.util.*;
+class DataSt{
+    int l;
+    int size;
+    String a[];
+    int top = -1;
+    int ocomma=0,ccomma=0,ocurly=0,ccurly=0,osquare=0,csquare=0;
+    DataSt(int l){
+        a = new String[l];
+        size = l;
+    }
+    void push(String data,String s){
+        if(top!=size-1){
+            top++;
+            a[top] = data;
+            String aa="(",bb=")",cc="{",dd="}",ee="[",ff="]";
+            if(a[top].equals(aa)){
+                ocomma++;
+                //d.check(ocomma);
+            }
+            else if(a[top].equals(bb)){
+                ccomma++;
+                //d.check(ccomma);
+            }
+            else if(a[top].equals(cc)){
+                ocurly++;
+                //d.check(ocurly);
+            }
+            else if(a[top].equals(dd)){
+                ccurly++;
+                //d.check(ccurly);
+            }
+            else if(a[top].equals(ee)){
+                osquare++;
+                //d.check(osquare);
+            }
+            else if(a[top].equals(ff)){
+                csquare++;
+                //d.check(csquare);
+            }
+        }
+    }
+        /*else{
+            continue;
+        }*/
+        void check(String s){
+        if(ocomma==ccomma&&ocurly==ccurly&&osquare==csquare){
+            System.out.println(s);
+            System.out.println("BALANCED");
+            //break;
+        }
+        else if(s==" "){
+            System.out.println("BALANCED");
+        }
+        else{
+            System.out.println(s);
+            System.out.println("NOT BALANCED");
+            //break;
+        }
+    }
+    
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int l = s.length();
+        DataSt d = new DataSt(l);
+        String s1[] = s.split("");
+        String data;
+        for(int i=0;i<l;i++){
+            data = s1[i];
+            d.push(data,s);
+        }
+        d.check(s);
+    }
+}
