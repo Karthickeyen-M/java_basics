@@ -1,0 +1,49 @@
+package basics;
+
+import java.util.*;
+class dMain{
+    int f=-1,r=-1,a[],s;
+    dMain(int n){
+        a = new int[n];
+        s=n;
+    }
+    void enqueue(int x){
+        if(r==-1){
+            f++;
+        }
+        if(r!=s-1){
+            r++;
+            a[r] = x;
+        }
+    }
+    void display(int h){
+        if(h>=1){
+        System.out.println("1");
+        }
+        for(int i=2;i<=h;i++){
+            int v=i,j=0;
+            String st = "";
+            while(v>0){
+                int r=0;
+                r=v%2;
+                st+=r;
+                v/=2;
+            }
+            for(int k=st.length()-1;k>=0;k--){
+                System.out.print(st.charAt(k));
+            }
+            System.out.println();
+        }
+    }
+}
+class BinaryQueue{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        dMain m = new dMain(n);
+        for(int i=1;i<=n;i++){
+            m.enqueue(i);
+        }
+        m.display(n);
+    }
+}

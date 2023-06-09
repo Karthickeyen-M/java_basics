@@ -1,0 +1,35 @@
+package basics;
+
+import java.util.*;
+class Main{
+    int f=-1,r=-1,a[],s;
+    Main(int n){
+        a = new int[n];
+        s = n;
+    }
+    void push(int data){
+        if(r==-1){
+            f++;
+        }
+        if(r!=s-1){
+            r++;
+            a[r] = data;
+        }
+    }
+    void display(){
+        for(int i=r;i>=f;i--){
+            System.out.print(a[i]+" ");
+        }
+    }
+}
+class Queue1{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        Main m = new Main(n);
+        for(int i=0;i<n;i++){
+            m.push(sc.nextInt());
+        }
+        m.display();
+    }
+}

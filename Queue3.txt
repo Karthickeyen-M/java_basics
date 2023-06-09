@@ -1,0 +1,44 @@
+package basics;
+
+import java.util.*;
+class Main{
+    int f=-1,r=-1,a[],s;
+    Main(int n){
+        a = new int[n];
+        s=n;
+    }
+    void push(int data){
+        if(r==-1){
+            f++;
+        }
+        if(r!=s-1){
+            r++;
+            a[r] = data;
+        }
+    }
+    void display(int n){
+        if(r==n-1){
+            for(int i=f;i<=r;i++){
+                System.out.print(a[i]+" ");
+            }
+        }
+        else{
+        System.out.print("QUEUE OVERFLOW");
+        }
+    }
+}
+class Queue3{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        if(n<0)
+        System.out.print("QUEUE UNDERFLOW");
+        else{
+        Main m = new Main(n);
+        for(int i=0;i<n;i++){
+            m.push(sc.nextInt());
+        }
+        m.display(n);
+        }
+    }
+}

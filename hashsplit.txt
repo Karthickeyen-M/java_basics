@@ -1,0 +1,21 @@
+package basics;
+
+import java.util.HashSet;
+import java.util.Spliterator;
+import java.util.function.Consumer;
+
+public class hashsplit {
+    public static void main(String[] args)
+    {
+        HashSet<String> a=new HashSet<String>();
+        a.add("karthi");
+        a.add("akhil");
+        a.add("kavi");
+        a.add("akilesh");
+        a.add("anand");
+        a.add("inba");
+        Spliterator <String> spl=a.spliterator();
+        System.out.println("Elements in set");
+        spl.forEachRemaining((n)->System.out.println(n));
+    }
+}

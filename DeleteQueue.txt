@@ -1,0 +1,40 @@
+package basics;
+
+import java.util.*;
+class Delete{
+    int f=-1,r=-1,a[],s;
+    Delete(int n){
+        a = new int[n];
+        s=n;
+    }
+    void enqueue(int data){
+        if(r==-1){
+            f++;
+        }
+        if(r!=s-1){
+            r++;
+            a[r] = data;
+        }
+    }
+    void dequeue(int x){
+        for(int i=f;i<x;i++){
+            System.out.println("Element deleted from queue is : "+a[i]);
+        }
+        System.out.println("Queue is : ");
+        for(int i=x;i<=r;i++){
+            System.out.print(a[i]+" ");
+        }
+    }
+}
+class DeleteQueue{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        Delete m = new Delete(n);
+        for(int i=0;i<n;i++){
+            m.enqueue(sc.nextInt());
+        }
+        int x = sc.nextInt();
+        m.dequeue(x);
+    }
+}

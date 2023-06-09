@@ -1,0 +1,36 @@
+package package1;
+
+class Person {
+    Person(){
+        System.out.println("This is Person's class constructor");
+    }
+
+    void printName(){
+        System.out.println("ProgrammerBay");
+    }
+}
+
+class Programmer extends Person{
+    Programmer(){
+        System.out.println("This is Programmer's class constructor");
+    }
+    void printCodingLanguage(){
+        System.out.println("Java");
+    }
+}
+
+class Program extends  Programmer{
+    Program(){
+        System.out.println("This is Program's class constructor");
+    }
+
+    void printLineOfCode(){
+        System.out.println(20);
+    }
+    public static void main(String[] args) {
+        Program program = new Program();
+        program.printName();
+        program.printCodingLanguage();
+        program.printLineOfCode();
+    }
+}

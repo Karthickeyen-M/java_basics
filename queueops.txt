@@ -1,0 +1,71 @@
+package basics;
+import java.util.*;
+class Queue{
+    int f=-1,r=-1,a[],s;
+    Queue(int x){
+        a = new int[x];
+        s=x;
+    }
+    void queueEnqueue(int n){
+        if(r==-1){
+            f++;
+        }
+        if(r!=s-1){
+            r++;
+            a[r] = n;
+        }
+    }
+    void queueDisplay(){
+        //if(f>r){
+         //   System.out.println("Queue is empty");
+        //}
+        //else{
+            for(int i=f;i<=r;i++){
+                System.out.print(a[i]+" ");
+            }
+            System.out.println();
+        //}
+    }
+    void queueDequeue(){
+        if(f<=r)
+        f++;
+        else
+        System.out.println("Queue is empty");
+    }
+}
+class Queue6 { 
+
+	public static void main(String[] args) 
+	{ 
+	    Scanner sc = new Scanner(System.in);
+		Queue que = new Queue(5); 
+
+		// inserting elements in the queue 
+		int n = sc.nextInt();
+		que.queueEnqueue(n);
+		n = sc.nextInt();
+		que.queueEnqueue(n);
+		n = sc.nextInt();
+		que.queueEnqueue(n); 
+		n = sc.nextInt();
+		que.queueEnqueue(n);
+		n = sc.nextInt();
+		que.queueEnqueue(n); 
+
+		// print Queue elements 
+		que.queueDisplay(); 
+
+		que.queueDequeue(); 
+		que.queueDequeue(); 
+
+		// print Queue elements 
+		que.queueDisplay(); 
+
+		que.queueDequeue(); 
+		que.queueDequeue(); 
+		
+		que.queueDequeue(); 
+		que.queueDequeue(); 
+
+	} 
+} 

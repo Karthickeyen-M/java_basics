@@ -1,0 +1,14 @@
+package basics;
+import java.util.*;
+public class hashobj {
+    public static void main(String[] args){
+        HashSet a=new HashSet();
+        a.add("karthickeyen");
+        a.add(17);
+        a.add(11);
+        a.add(2001);
+        a.add("19epci013");
+        a.add("stark");
+        System.out.println(a);
+    }
+}

@@ -1,0 +1,49 @@
+package basics;
+
+import java.util.*;
+class Mai{
+    int f=-1,r=-1,a[],s;
+    Mai(int n){
+        a = new int[n];
+        s=n;
+    }
+    void enqueue(int data){
+        if(r==-1){
+            f++;
+        }
+        if(r!=s-1){
+            r++;
+            a[r] = data;
+        }
+    }
+    void display(){
+        if(s%2!=0){
+        System.out.print(a[r]+" ");
+        }
+        //if(s%2==0){
+            int d=(s/2)+1;
+            for(int i=f;i<r/2;i++){
+                System.out.print(a[i]+" ");
+                if(d%2!=0&&d==s){
+                    break;
+                }
+                System.out.print(d+" ");
+                d++;
+            }
+            if(s%2==0){
+                System.out.print(a[r/2]+" "+a[r]);
+            }
+        //}
+    }
+}
+class Largestelement{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        Mai m = new Mai(n);
+        for(int i=1;i<=n;i++){
+            m.enqueue(i);
+        }
+        m.display();
+    }
+}

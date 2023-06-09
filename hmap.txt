@@ -1,0 +1,28 @@
+package basics;
+import java.util.*;
+public class Hmap {
+    public static void main(String[] args)
+    {
+        HashMap<Integer,String> student = new HashMap<>();
+        student.put(2,"Akhil");
+        student.put(3,"Akilesh");
+        student.put(6,"Anand");
+        student.put(13,"Karthi");
+        student.put(16,"Kavi");
+        for(Map.Entry x:student.entrySet())
+        {
+            System.out.println(x.getKey()+" "+x.getValue());
+        }
+        Set<Integer> keys=student.keySet();
+        System.out.println("print keys for the hashmap");
+        for(Integer key:keys)
+        {
+            System.out.println(key);
+        }
+        System.out.println("print values from the hashmap");
+        for(Integer key:keys)
+        {
+            System.out.println(student.get(key));
+        }
+    }
+}
