@@ -1,0 +1,31 @@
+package basics;
+
+interface Prin{}  
+class AaAa implements Prin{  
+public void a(){System.out.println("a method");}  
+}  
+class BbB implements Prin{  
+public void b(){System.out.println("b method");}  
+}  
+  
+class Call{  
+void invoke(Prin p){
+if(p instanceof AaAa){  
+A a=(A)p;
+a.a();  
+}  
+if(p instanceof BbB){  
+B b=(B)p;
+b.b();  
+}  
+  
+}  
+} 
+  
+class Test4{  
+public static void main(String args[]){  
+Prin p=new BbB();  
+Call c=new Call();  
+c.invoke(p);  
+}  
+}  

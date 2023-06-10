@@ -1,0 +1,19 @@
+package basics;
+
+import java.util.*;  
+public class Hmap1 {  
+   public static void main(String args[]) {  
+    HashMap<Integer,String> map=new HashMap<Integer,String>();          
+      map.put(2,"Akhil");    
+      map.put(3,"Akilesh");    
+      map.put(16,"Kavi");  
+      map.put(13, "Karthi");  
+    System.out.println("Initial list of elements: "+map);  
+    map.remove(2);  
+    System.out.println("Updated list of elements: "+map);  
+    map.remove(3);  
+    System.out.println("Updated list of elements: "+map);  
+    map.remove(16, "Kavi");  
+    System.out.println("Updated list of elements: "+map);  
+   }      
+}  

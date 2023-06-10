@@ -1,0 +1,24 @@
+package basics;
+
+class Overriding {
+	  public void eat() {
+	    System.out.println("I can eat");
+	  }
+	}
+	class Dogg extends Animal {
+	  @Override
+	  public void eat() {
+	    System.out.println("I eat dog food");
+	  }
+	  public void barkk() {
+	    System.out.println("I can bark");
+	  }
+	}
+
+	class Maiin {
+	  public static void main(String[] args) {
+	    Dogg labrador = new Dogg();
+	    labrador.eat();
+	    labrador.barkk();
+	  }
+	}

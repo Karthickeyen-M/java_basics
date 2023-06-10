@@ -1,0 +1,16 @@
+package basics;
+
+interface Intrest{  
+float rateOfInterest();  
+}  
+class SBIi implements Intrest{  
+public float rateOfInterest(){return 9.15f;}  
+}  
+class PNBb implements Intrest{  
+public float rateOfInterest(){return 9.7f;}  
+}  
+class TestInterface2{  
+public static void main(String[] args){  
+Intrest b=new SBIi();  
+System.out.println("ROI: "+b.rateOfInterest());  
+}}  

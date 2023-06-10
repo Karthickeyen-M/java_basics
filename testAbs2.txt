@@ -1,0 +1,19 @@
+package basics;
+
+abstract class TestAbs2{  
+	   TestAbs2(){System.out.println("bike is created");}  
+	   abstract void run();  
+	   void changeGear(){
+		   System.out.println("gear changed");
+		   }  
+	 }   
+	 class Honda extends TestAbs2{  
+	 void run(){System.out.println("running safely..");}  
+	 }    
+	 class TestAbstraction2{  
+	 public static void main(String args[]){  
+	  TestAbs2 obj = new Honda();  
+	  obj.run();  
+	  obj.changeGear();  
+	 }  
+	}  

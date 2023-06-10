@@ -1,0 +1,16 @@
+package basics;
+
+class Aaa{  
+public int data=40;  
+public void msg(){
+	System.out.println("Hello java");
+	}  
+}  
+  
+public class Aa extends Aaa{  
+ public static void main(String args[]){  
+   Aaa obj=new Aaa();  
+   System.out.println(obj.data);
+   obj.msg();
+   }  
+}  

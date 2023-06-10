@@ -1,0 +1,14 @@
+package basics;
+
+import java.util.*;    
+class TreeSet2{    
+ public static void main(String args[]){    
+ TreeSet<Integer> set=new TreeSet<Integer>();    
+         set.add(3);    
+         set.add(2);    
+         set.add(13);    
+         set.add(16);    
+         System.out.println("Lowest Value: "+set.pollFirst());    
+         System.out.println("Highest Value: "+set.pollLast());    
+ }    
+}    

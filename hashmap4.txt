@@ -1,0 +1,44 @@
+package basics;
+
+import java.util.HashMap;
+import java.util.Map.Entry;
+import java.util.Set;
+ 
+public class H5 
+{    
+    public static void main(String[] args) 
+    { 
+         
+        HashMap<String, String> map = new HashMap<String, String>();
+         
+        map.put("ONE", "AAA");
+         
+        map.put("TWO", "BBB");
+         
+        map.put("THREE", "CCC");
+         
+        map.put("FOUR", "DDD");
+         
+        map.put("FIVE", "EEE");
+         
+        System.out.println("HashMap Before Replace :");
+                 
+        Set<Entry<String, String>> keyValueSet = map.entrySet();
+                 
+        for (Entry<String, String> entry : keyValueSet) 
+        {
+            System.out.println(entry.getKey()+" : "+entry.getValue());
+        }
+                 
+        System.out.println("------------------");
+         
+        map.replace("THREE", "333");
+         
+        System.out.println("HashMap After Replace :");
+                 
+        for (Entry<String, String> entry : keyValueSet) 
+        {
+            System.out.println(entry.getKey()+" : "+entry.getValue());
+        }
+    }   
+}
